@@ -15,11 +15,10 @@ function preload() {
   fontPixelify = loadFont('assets/PixelifySans.ttf');
   // Letras rosa
   conexao_rosa = loadImage('assets/crosa.png');
-  conexao_roxo = loadImage('assets/croxo.png');
-  conexao_azul = loadImage('assets/cazul.png');
-  conexao_verde = loadImage('assets/cverde.png');
   instruçoes = loadImage('assets/instrucoes.png')
   creditos = loadImage('assets/creditos.png')
+  eu = loadImage('assets/me.png')
+  wyna_liu =loadImage('assets/wynaliu.png')
 }
 
 // As cores utilizadas
@@ -30,7 +29,7 @@ var rosa_claro = '#F1E4F0'
 /*Criação do espaço utilizado - 1366 e 643 são os tamanhos da minha janela 
 obtido por tentativa e erro, pois quando eu usava windowHeight e width não funcionava*/
 function setup() {
-  createCanvas(1363, 633); 
+  createCanvas(1366, 643); 
 }
 
 // Botão de como funciona
@@ -109,31 +108,49 @@ function TelaMenu(){
 }
 
 function TelaInstruçoes(){
+  noFill()
   background(rosa);
   textSize(35)
   BotaoVoltar()
   fill(rosa_claro)
-  rect(250, 75, 863, 483, 25)
+  rect(250, 75, 863, 500, 25)
   image(instruçoes, 451.1, 80, 460.8, 97.2);
+  textAlign(LEFT)
+  fill(0)
+  noStroke()
+  text('* Ache grupos de 4 itens que tenham uma conexão em comum' +'\n' + 
+  '* Selecione os 4 itens e aperte em enviar' + '\n' + 
+  '* Ache os grupos sem fazer 5 erros' + '\n'+
+  '* Cada enigma tem apenas uma solução correta!', 300, 225, 750, 300)
 }
 
 // Função da tela de créditos
 function TelaCreditos(){
+  noFill()
   background(rosa);
   textSize(35)
   BotaoVoltar()
+  textAlign(LEFT)
   fill(rosa_claro)
   rect(250, 75, 863, 483, 25)
   image(creditos, 476.1, 80, 410.8, 97.2);
-
+  image(eu, 300, 200, 65, 65)
+  image(wyna_liu, 300, 290, 65, 65)
+  fill(0)
+  noStroke()
+  text('Maria Helena Leocádio - Desenvolvedora', 400, 240)
+  text('Wyna Liu - Criadora do jogo original', 400, 330)
 
 }
 
 
 //Criação do botão de voltar
 function BotaoVoltar(){
+  textAlign(CENTER)
+  noFill()
   textSize(35)
   stroke(0)
+  fill(rosa_claro)
   rect(30, 30, 45, 45, 10);
   fill(rosa)
   if(mouseX>30 && mouseX<75 && mouseY>30 && mouseY<75){
@@ -160,7 +177,8 @@ function draw() {
   } 
   //Tela do JOGO
   if(tela == 3){
-    background('#9DF03F');
+    background(rosa);
+    fill(rosa_claro)
     textSize(35)
     BotaoVoltar()
 
