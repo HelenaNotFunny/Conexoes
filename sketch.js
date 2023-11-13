@@ -26,8 +26,7 @@ var rosa = '#EA2E8F'
 var rosa_escuro = '#990752'
 var rosa_claro = '#F1E4F0'
 
-/*Criação do espaço utilizado - 1366 e 643 são os tamanhos da minha janela 
-obtido por tentativa e erro, pois quando eu usava windowHeight e width não funcionava*/
+/*Criação do espaço utilizado - 1366 e 643 são os tamanhos da minha janela*/
 function setup() {
   createCanvas(1366, 643); 
 }
