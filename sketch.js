@@ -43,16 +43,12 @@ var rosa = '#EA2E8F'
 var rosa_escuro = '#990752'
 var rosa_claro = '#F1E4F0'
 
-<<<<<<< Updated upstream
-/*Criação do espaço utilizado - 1366 e 643 são os tamanhos da minha janela*/
-=======
 // Jogo Fácil
 Facil = ['Catapimbas', 'Carambola', 'Cruzes', 'Credo', "Francês", "Cacetinho", "Carioquinha", 'Sal', 'Manga', 'Saia', 'Meia', 'Bota', 'Pão de Açúcar', 'Mermão', 'Samba', 'Dom Pedro II']
 Medio = ['Do', 'Re', 'Mi', 'Fa', ' ']
 Dificil = []
 
 //Criação do espaço utilizado - 1366, 643
->>>>>>> Stashed changes
 function setup() {
   createCanvas(Tela_Largura, Tela_Altura); 
   Facil_Misturado = shuffle(Facil)
